@@ -50,7 +50,7 @@ public class EmployeesIndexServlet extends HttpServlet {
 		em.close();
 
 		request.setAttribute("employees", employees);
-		request.setAttribute("employees_Count", employees_count);
+		request.setAttribute("employees_count", employees_count);
 		request.setAttribute("page", page);
 		if(request.getSession().getAttribute("flush") != null){
 		    request.setAttribute("flushi", request.getSession().getAttribute("flush"));

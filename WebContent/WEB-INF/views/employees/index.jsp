@@ -15,7 +15,7 @@
                     <th>氏名</th>
                     <th>操作</th>
                 </tr>
-                <c:forEach var ="employee" items ="${employee}" varStatus ="status">
+                <c:forEach var ="employee" items ="${employees}" varStatus ="status">
                     <tr class ="row${status.count % 2}">
                         <td><c:out value="${employee.code}" /></td>
                         <td><c:out value="${employee.name}" /></td>
@@ -25,7 +25,7 @@
                                     （削除済み）
                                 </c:when>
                                 <c:otherwise>
-                                    <a herf ="<c:url value ='/employees/show?id=${employee.id}' />"詳細を表示</a>
+                                    <a href ="<c:url value ='/employees/show?id=${employee.id}' />">詳細を表示</a>
                                 </c:otherwise>
                             </c:choose>
                         </td>
@@ -42,7 +42,7 @@
                         <c:out value="${i}" />&nbsp;
                      </c:when>
                      <c:otherwise>
-                        <a herf ="<c:url value ='/employees/index?page=${i}' />"<c:out value="${i}" /></a>&nbsp;
+                        <a href ="<c:url value ='/employees/index?page=${i}' />"><c:out value="${i}" /></a>&nbsp;
                      </c:otherwise>
                 </c:choose>
             </c:forEach>
